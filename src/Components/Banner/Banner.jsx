@@ -27,7 +27,7 @@ const Banner = () => {
 
             <div className='flex flex-col justify-center -px-'>
                 <h1 className='text-3xl sm:text-4xl font-bold font-cursive'>Premium Blend Coffe</h1>
-                <p className='text-sm py-2 tracking-wide leading-5 line-clamp-2'>
+                <p className='text-sm py-4 tracking-wide leading-5 line-clamp-2'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ullam dolorem velit, esse dolorum id? Ullam ratione laborum perspiciatis pariatur expedita, cum optio non
                 </p>
                 <div className='grid grid-cols-2 gap-2'>
