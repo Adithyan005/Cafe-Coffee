@@ -22,7 +22,7 @@ const Testimonialdata = [
   },
   {
     id: 4,
-    name: "Karthi",
+    name: "Sam",
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptates at laboriosam tempora ex sunt in, esse pariatur distinctio ab nulla, voluptatum architecto cumque iure modi! Et ad praesentium eum?",
     img: "https://fastly.picsum.photos/id/443/200/200.jpg?hmac=ceI_qNYuyS_i8MicdRztsYDJLek0_-IDsEwLhAfaIEo",
   },
