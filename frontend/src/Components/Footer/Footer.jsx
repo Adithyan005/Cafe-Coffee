@@ -1,26 +1,28 @@
-import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-
-const footerlink = [
-  {
-    title: "Home",
-    link: "/#",
-  },
-  {
-    title: "About",
-    link: "/#about",
-  },
-  {
-    title: "Contact",
-    link: "/#contact",
-  },
-  {
-    title: "Blog",
-    link: "/#blog",
-  },
-];
+import React, { useState } from "react";
+import axios from "axios"
 
 const Footer = () => {
+
+  const [name,setName]=useState()
+  const [email,setEmail]=useState()
+  const [phone,setPhone]=useState()
+  const [message,setMessage]=useState()
+
+  const handlesubmit=(e)=>{
+    e.preventDefault();
+    const res = axios.post("http://localhost:4000/",{name,email,phone,message})
+    try {
+      setName("")
+      setEmail("")
+      setPhone("")
+      setMessage("")
+      console.log('inserted')
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   return (
     <>
       <div className="bg-primary">
@@ -40,14 +42,18 @@ const Footer = () => {
                     <input
                       type="text"
                       className="w-[16rem] h-8 p-2"
-                      name="name"
+                      name="name" value={name} onChange={(e)=>setName(e.target.value)}
                     />
                   </div>
                   <div className="">
                     <label htmlFor="" className="p-4 text-white">
                       Email
                     </label>
-                    <input type="email" className="w-[16rem] h-8 p-2" />
+                    <input
+                      type="email"
+                      name="email" value={email} onChange={(e)=>setEmail(e.target.value)}
+                      className="w-[16rem] h-8 p-2"
+                    />
                     <br />
                   </div>
                 </div>
@@ -57,7 +63,11 @@ const Footer = () => {
                       Phone
                     </label>
                     <br />
-                    <input type="number" className="w-[16rem] h-8 p-2" />
+                    <input
+                      type="number"
+                      name="phone" value={phone} onChange={(e)=>setPhone(e.target.value)}
+                      className="w-[16rem] h-8 p-2"
+                    />
                   </div>
                   <div className="pl-10">
                     <label htmlFor="" className="p-4 text-white">
@@ -66,11 +76,12 @@ const Footer = () => {
                     <br />
                     <textarea
                       name="message"
-                      id=""
+                      id="" value={message} onChange={(e)=>setMessage(e.target.value)}
                       className="w-[16rem] p-2 rows={7} cols={50}"
                     />
                   </div>
                 </div>
+                <input type="submit" className="text-white" onClick={handlesubmit}/>
               </form>
             </div>
           </div>
