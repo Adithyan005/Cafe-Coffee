@@ -9,6 +9,7 @@ import Banner from './Components/Banner/Banner';
 import Appstore from './Components/Appstore/Appstore';
 import Testimonial from './Components/Testimonial/Testimonial';
 import Footer from './Components/Footer/Footer';
+import Appointments from './Components/Appointments/Appointments';
 const App = () => {
     useEffect(()=>{
         Aos.init({

@@ -32,9 +32,10 @@ const Footer = () => {
               <h3 className="text-3xl font-cursive text-white">Contact Us</h3>
               <div></div>
             </div>
-            <div className="">
+            <div className="container">
               <form>
-                <div className="flex gap-5 p-5">
+                <div>
+                <div className="flex flex-col gap-5 p-5">
                   <div className="">
                     <label htmlFor="" className="p-4 text-white">
                       Name
@@ -57,7 +58,7 @@ const Footer = () => {
                     <br />
                   </div>
                 </div>
-                <div className="flex gap-5 p-5">
+                <div className="flex flex-col gap-5 p-5">
                   <div className="">
                     <label htmlFor="" className="p-4 text-white">
                       Phone
@@ -69,7 +70,7 @@ const Footer = () => {
                       className="w-[16rem] h-8 p-2"
                     />
                   </div>
-                  <div className="pl-10">
+                  <div className="">
                     <label htmlFor="" className="p-4 text-white">
                       Write Your Message
                     </label>
@@ -82,6 +83,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <input type="submit" className="text-white" onClick={handlesubmit}/>
+                </div>
               </form>
             </div>
           </div>
