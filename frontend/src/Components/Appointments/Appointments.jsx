@@ -3,7 +3,10 @@ import React from 'react'
 const Appointments = () => {
   return (
     <div>
-      hello makkale
+      <form action="">
+        Name
+        Time
+      </form>
     </div>
   )
 }
