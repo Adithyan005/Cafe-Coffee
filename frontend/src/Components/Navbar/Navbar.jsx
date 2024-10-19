@@ -20,8 +20,8 @@ const Navbar = () => {
               <ul className="flex items-center gap-4">
                 <li><a href="/" className="text-white/70 hover:text-white duration-100">Home</a></li>
                 <li><a href="
-                services" className="text-white/70 hover:text-white duration-100">Best Coffee</a></li>
-                <li><a href="about" className="text-white/70 hover:text-white duration-100">About</a></li>
+                service" className="text-white/70 hover:text-white duration-100">Best Coffee</a></li>
+                <li><a href="banner" className="text-white/70 hover:text-white duration-100">About</a></li>
                 <li><a href="appstore" className="text-white/70 hover:text-white duration-100">App</a></li>
                 <li><a href="testimonial" className="text-white/70 hover:text-white duration-100">Testimonials</a></li>
                 <li><a href="contact" className="text-white/70 hover:text-white duration-100">Contact</a></li>

@@ -21,7 +21,24 @@ const App = () => {
     })
   return (
     <div>
-      <Navbar/>
+
+      {/* <BrowserRouter>
+      <header>
+        <Navbar/>
+      </header>
+      <main>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/service' element={<Service/>}/>
+          <Route path='/banner' element={<Banner/>}/>
+          <Route path='/appstore' element={<Appstore/>}/>
+          <Route path='/testimonial' element={<Testimonial/>}/>
+          <Route path='/contact' element={<Footer/>}/>
+        </Routes>
+      </main>
+      
+      </BrowserRouter> */}
+        <Navbar/>
         <Home/>
         <Service/>
         <Banner/>

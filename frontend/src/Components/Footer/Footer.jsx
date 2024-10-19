@@ -59,8 +59,6 @@ const Footer = () => {
           </div>
         </form>
       </div>
-
-
     </div>
     </>
   );
