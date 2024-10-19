@@ -4,8 +4,7 @@ const Appointments = () => {
   return (
     <div>
       <form action="">
-        Name
-        Time
+        
       </form>
     </div>
   )

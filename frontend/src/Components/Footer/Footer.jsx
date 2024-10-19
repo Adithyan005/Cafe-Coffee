@@ -25,70 +25,43 @@ const Footer = () => {
 
   return (
     <>
-      <div className="bg-primary">
-        <div className="flex">
-          <div className="grid grid-cols-2">
-            <div className="justify-center items-center p-6">
-              <h3 className="text-3xl font-cursive text-white">Contact Us</h3>
-              <div></div>
-            </div>
-            <div className="container">
-              <form>
-                <div>
-                <div className="flex flex-col gap-5 p-5">
-                  <div className="">
-                    <label htmlFor="" className="p-4 text-white">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-[16rem] h-8 p-2"
-                      name="name" value={name} onChange={(e)=>setName(e.target.value)}
-                    />
-                  </div>
-                  <div className="">
-                    <label htmlFor="" className="p-4 text-white">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email" value={email} onChange={(e)=>setEmail(e.target.value)}
-                      className="w-[16rem] h-8 p-2"
-                    />
-                    <br />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-5 p-5">
-                  <div className="">
-                    <label htmlFor="" className="p-4 text-white">
-                      Phone
-                    </label>
-                    <br />
-                    <input
-                      type="number"
-                      name="phone" value={phone} onChange={(e)=>setPhone(e.target.value)}
-                      className="w-[16rem] h-8 p-2"
-                    />
-                  </div>
-                  <div className="">
-                    <label htmlFor="" className="p-4 text-white">
-                      Write Your Message
-                    </label>
-                    <br />
-                    <textarea
-                      name="message"
-                      id="" value={message} onChange={(e)=>setMessage(e.target.value)}
-                      className="w-[16rem] p-2 rows={7} cols={50}"
-                    />
-                  </div>
-                </div>
-                <input type="submit" className="text-white" onClick={handlesubmit}/>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+    <div className="bg-primary flex justify-around items-center font-cursive text-white">
+      
+      <div className="">
+        <h1 className="text-2xl">Contact Us</h1>
       </div>
+
+      <div>
+        <form action="">
+          <div className="pt-8">
+
+            <div className="flex justify-center items-center gap-4 space-x-6">
+            <label htmlFor="" className="">Name</label>
+            <input type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)} className="h-8 w-[20rem] text-black p-1 font-mono"/>
+
+            <label htmlFor="">Email</label>
+            <input type="email" name="email" value={email} onChange={(e)=>setEmail(e.target.value)} className="h-8  w-[20rem] text-black p-1 font-mono"/>
+            </div>
+
+            <div className="flex justify-center items-center space-x-6 space-y-3">
+              <label htmlFor="" className="">Phone</label>
+              <input type="text" maxLength="10" name="phone" value={phone} onChange={(e)=>setPhone(e.target.value)}
+              className="h-8 text-black p-1 font-mono w-[20rem]"/>
+              
+              <label htmlFor="" className="pl-7">Message</label>
+              <textarea name="message" id="" value={message} onChange={(e)=>setMessage(e.target.value)} rows="3" cols="30" className="text-black p-1 font-mono w-[20rem]"/>
+            </div>
+
+            <div className="flex justify-center items-center p-5">
+            <button className="bg-ghostwhite rounded-xl shadow-xl p-3 text-black" onClick={handlesubmit}>Submit</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+
+    </div>
     </>
   );
 };

@@ -9,7 +9,7 @@ import Banner from './Components/Banner/Banner';
 import Appstore from './Components/Appstore/Appstore';
 import Testimonial from './Components/Testimonial/Testimonial';
 import Footer from './Components/Footer/Footer';
-import Appointments from './Components/Appointments/Appointments';
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 const App = () => {
     useEffect(()=>{
         Aos.init({
@@ -22,13 +22,13 @@ const App = () => {
   return (
     <div>
       <Navbar/>
-      <Home/>
-      <Service/>
-      <Banner/>
-      <Appstore/>
-      <Testimonial/>
-      <Footer/>
-    </div>
+        <Home/>
+        <Service/>
+        <Banner/>
+        <Appstore/>
+        <Testimonial/>
+        <Footer/>
+      </div>
   )
 }
 
