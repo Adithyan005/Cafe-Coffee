@@ -2,6 +2,7 @@ import express from "express"
 import mongoose from "mongoose"
 import cors from "cors"
 import UserModel from "./models/Customers.js";
+import AppointmentModel from "./models/Appointment.js";
 const app=express();
 
 app.use(cors());
@@ -31,6 +32,23 @@ app.post('/',async(req,res)=>{
         console.log(error)
     }
 })
+
+app.post('/appointment/insert',async(req,res)=>{
+    const {name,phone,count,date,time} = req.body
+    try {
+        const appointment=new AppointmentModel({
+            name,phone,count,date,time
+        })
+        await appointment.save();
+        console.log('inserted')
+        res.status(200).json({"message":"Inserted Successfully"})
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({"message":"Not inserted"})
+    }
+})
+
+
 
 app.listen(4000,console.log("server running on 4000"));
 
