@@ -25,6 +25,7 @@ const Footer = () => {
 
   return (
     <>
+    <span id="contact"></span>
     <div className="bg-primary flex justify-around items-center font-cursive text-white">
       
       <div className="">

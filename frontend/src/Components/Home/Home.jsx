@@ -1,7 +1,12 @@
 import React from "react";
 import cof from "../../assets/imgs/5.png";
-import Appointments from "../Appointments/Appointments";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate=useNavigate();
+  
+  const handleclick=()=>{
+    navigate('/appointment')
+  }
   return (
     <div id="home">
     <div className="min-[h-550px] sm:min-h-[600px] bg-brandDark flex justify-center items-center text-white">
@@ -14,7 +19,7 @@ const Home = () => {
               city
             </h1>
             <div>
-              <button className="button bg-gradient-to-r from bg-primary to secondary rounded-full text-white px-4 py-2 hover:scale-105 duration-200" onClick={()=><Appointments/>}>
+              <button className="button bg-gradient-to-r from bg-primary to secondary rounded-full text-white px-4 py-2 hover:scale-105 duration-200" onClick={handleclick}>
                 Book Appointment
               </button>
             </div>

@@ -7,7 +7,7 @@ const app=express();
 app.use(cors());
 app.use(express.json())
 
-mongoose.connect("mongodb://localhost:27017/coffee")
+mongoose.connect("mongodb+srv://adithyanm22cse:Gb1SwiuizBxFh1Qj@cluster0.f9uba.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 try {
     console.log('connected')
 } catch (error) {

@@ -3,9 +3,7 @@ import React from 'react'
 const Appointments = () => {
   return (
     <div>
-      <form action="">
-        
-      </form>
+      <h1>haii</h1>
     </div>
   )
 }
