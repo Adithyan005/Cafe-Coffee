@@ -23,9 +23,9 @@ const Appstore = () => {
             
             <div className='flex flex-wrap justify-center sm:justify-start items-center'>
               
-              <a href="#"><img src={ios} alt="" className='max-w-[150px] sm:max-w-[120px] md:max-w-[200px] '/></a>
+              <a href="https://www.apple.com/in/app-store/" target='_blank'><img src={ios} alt="" className='max-w-[150px] sm:max-w-[120px] md:max-w-[200px] '/></a>
 
-              <a href="#"><img src={playstore} alt="" className='p-1 max-w-[150px] sm:max-w-[120px] md:max-w-[200px]'/></a>
+              <a href="https://play.google.com/store/games?device=windows&pli=1" target='_blank'><img src={playstore} alt="" className='p-1 max-w-[150px] sm:max-w-[120px] md:max-w-[200px]'/></a>
           
             </div>
           </div>

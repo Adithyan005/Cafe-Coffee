@@ -26,10 +26,16 @@ const Footer = () => {
   return (
     <>
     <span id="contact"></span>
-    <div className="bg-primary flex justify-around items-center font-cursive text-white">
+    <div className="bg-primary flex justify-around items-center gap-5 font-cursive text-white">
       
-      <div className="">
+      <div className="flex flex-col justify-center items-center gap-5">
         <h1 className="text-2xl">Contact Us</h1>
+        <div className="flex justify-center items-center gap-6">
+          <a href="#"><h1>Home</h1></a>
+          <a href="#services"><h1>BestSeller</h1></a>
+          <a href="#banner"><h1>About</h1></a>
+          <a href="#footer"><h1>Contact</h1></a>
+        </div>
       </div>
 
       <div>

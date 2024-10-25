@@ -10,6 +10,13 @@ export default {
         sans:["Poppins","sans-serif"],
         cursive:["Pacifico","cursive"],
       },
+      screens:{
+        sm:"320px",
+        md:"430px",
+        lg:"768px",
+        xl:"1024px"
+
+      },
       colors:{
         primary:"#854d3d",
         secondary:"#4a1e1b",
