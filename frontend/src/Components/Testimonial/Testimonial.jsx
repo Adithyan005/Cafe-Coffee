@@ -38,8 +38,8 @@ const Testimonial = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     cssEase: "linear",
-    pauseOnHover: "true",
-    pauseOnFocus: "true",
+    pauseOnHover: true,
+    pauseOnFocus: true,
     responsive: [
       {
         breakpoint: 10000,
@@ -66,45 +66,37 @@ const Testimonial = () => {
       },
     ],
   };
+
   return (
-    <>
-      <div className="py-9 mb-10">
-        <div className="container">
-          <div className="text-center mb-20">
-            <h1 className="text-4xl font-cursive font-bold ">Testimonial</h1>
-            <p></p>
-          </div>
-          <div>
-            <Slider {...settings}>
-              {Testimonialdata.map((data, index) => {
-                return (
-                  <div className="my-3" key={data.id}>
-                    <div className="flex flex-col gap-4 shadow-lg rounded-xl bg-primary/10 py-6 px-6 mx-4 relative">
-                      <div className="mb-4">
-                        <img
-                          src={data.img}
-                          alt=""
-                          className="rounded-full w-20 h-20"
-                        />
-                      </div>
-                      <div className="flex flex-col items-center gap-4">
-                        <div className="space-y-3">
-                          <p className="text-xs text-gray-500">{data.text}</p>
-                          <h1 className="text-xl font-bold text-black/80 font-cursive">
-                            {data.name}
-                          </h1>
-                        </div>
-                      </div>
-                      <p className="text-9xl text-black/20 font-serif absolute top-0 right-0">,,</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </Slider>
-          </div>
+    <div className="py-9 mb-10">
+      <div className="container">
+        <div className="text-center mb-20">
+          <h1 className="text-4xl font-cursive font-bold">Testimonial</h1>
         </div>
+        <Slider {...settings}>
+          {Testimonialdata.map((data) => (
+            <div className="my-3" key={data.id}>
+              <div className="flex flex-col gap-4 shadow-lg rounded-xl bg-primary/10 py-6 px-6 mx-4 relative">
+                <div className="mb-4 flex justify-center">
+                  <img
+                    src={data.img}
+                    alt={data.name}
+                    className="rounded-full w-20 h-20"
+                  />
+                </div>
+                <div className="flex flex-col items-center gap-4">
+                  <p className="text-xs text-gray-500 text-center">{data.text}</p>
+                  <h1 className="text-xl font-bold text-black/80 font-cursive">
+                    {data.name}
+                  </h1>
+                </div>
+                <p className="text-9xl text-black/20 font-serif absolute top-0 right-0">,,</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
-    </>
+    </div>
   );
 };
 
